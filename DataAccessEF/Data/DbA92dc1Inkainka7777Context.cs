@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessEF;
 
-public partial class DbA92dc1Inkainka7777Context : DbContext
+public partial class DbA92dc1Inkainka7777Context : IdentityDbContext<IdentityUser>
 {
     public DbA92dc1Inkainka7777Context()
     {

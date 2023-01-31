@@ -10,10 +10,12 @@
     <None Remove="Models\" />
     <None Remove="Interfaces\" />
     <None Remove="Interfaces\UnitOfWork\" />
+    <None Remove="Roles\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Interfaces\UnitOfWork\" />
+    <Folder Include="Roles\" />
   </ItemGroup>
 </Project>
