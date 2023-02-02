@@ -824,7 +824,8 @@
       "DataAccessEF/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.13"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2"
         },
         "runtime": {
           "DataAccessEF.dll": {}

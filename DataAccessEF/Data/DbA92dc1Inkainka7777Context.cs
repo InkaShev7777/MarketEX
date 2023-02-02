@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -12,14 +13,18 @@ public partial class DbA92dc1Inkainka7777Context : IdentityDbContext<IdentityUse
     {
     }
 
-    public DbA92dc1Inkainka7777Context(DbContextOptions options)
+    public DbA92dc1Inkainka7777Context(DbContextOptions<DbA92dc1Inkainka7777Context> options)
         : base(options)
     {
     }
 
     public virtual DbSet<CategoryProduct> CategoryProducts { get; set; }
 
+    public virtual DbSet<Login> Logins { get; set; }
+
     public virtual DbSet<Product> Products { get; set; }
+
+    public virtual DbSet<Registr> Registrs { get; set; }
 
 //    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
@@ -27,39 +32,6 @@ public partial class DbA92dc1Inkainka7777Context : IdentityDbContext<IdentityUse
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<CategoryProduct>(entity =>
-        {
-            entity.ToTable("CategoryProduct");
-
-            entity.Property(e => e.Id).HasColumnName("ID");
-            entity.Property(e => e.Title)
-                .HasMaxLength(250)
-                .IsUnicode(false);
-        });
-
-        modelBuilder.Entity<Product>(entity =>
-        {
-            entity.ToTable("Product");
-
-            entity.Property(e => e.Id).HasColumnName("ID");
-            entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
-            entity.Property(e => e.Img)
-                .HasMaxLength(500)
-                .IsUnicode(false)
-                .HasColumnName("IMG");
-            entity.Property(e => e.Model)
-                .HasMaxLength(250)
-                .IsUnicode(false);
-            entity.Property(e => e.Status)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Title)
-                .HasMaxLength(250)
-                .IsUnicode(false);
-        });
-
-        OnModelCreatingPartial(modelBuilder);
+        base.OnModelCreating(modelBuilder);
     }
-
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

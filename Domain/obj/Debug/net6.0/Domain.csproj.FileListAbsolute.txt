@@ -10,3 +10,5 @@
 /Users/ilyaschevchenko/Projects/MarcetUserWeb/Domain/obj/Debug/net6.0/refint/Domain.dll
 /Users/ilyaschevchenko/Projects/MarcetUserWeb/Domain/obj/Debug/net6.0/Domain.pdb
 /Users/ilyaschevchenko/Projects/MarcetUserWeb/Domain/obj/Debug/net6.0/ref/Domain.dll
+/Users/ilyaschevchenko/Projects/MarcetUserWeb/Domain/bin/Debug/net6.0/Domain.runtimeconfig.json
+/Users/ilyaschevchenko/Projects/MarcetUserWeb/Domain/obj/Debug/net6.0/Domain.genruntimeconfig.cache

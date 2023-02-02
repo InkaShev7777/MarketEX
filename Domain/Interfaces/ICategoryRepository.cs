@@ -1,9 +1,9 @@
 ﻿using System;
-using DataAccessEF;
+using Domain.Models;
 
 namespace Domain.Interfaces
 {
-	public interface ICategoryRepository:IGenericRepository<CategoryProduct>
+	public interface ICategoryRepository : IGenericRepository<CategoryProduct>
 	{
 
 	}

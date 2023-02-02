@@ -13,3 +13,5 @@
 /Users/ilyaschevchenko/Projects/MarcetUserWeb/DataAccessEF/obj/Debug/net6.0/refint/DataAccessEF.dll
 /Users/ilyaschevchenko/Projects/MarcetUserWeb/DataAccessEF/obj/Debug/net6.0/DataAccessEF.pdb
 /Users/ilyaschevchenko/Projects/MarcetUserWeb/DataAccessEF/obj/Debug/net6.0/ref/DataAccessEF.dll
+/Users/ilyaschevchenko/Projects/MarcetUserWeb/DataAccessEF/bin/Debug/net6.0/DataAccessEF.runtimeconfig.json
+/Users/ilyaschevchenko/Projects/MarcetUserWeb/DataAccessEF/obj/Debug/net6.0/DataAccessEF.genruntimeconfig.cache

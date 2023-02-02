@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DataAccessEF;
+namespace Domain.Models;
 
 public partial class CategoryProduct
 {

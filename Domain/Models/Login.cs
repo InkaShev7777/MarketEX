@@ -1,14 +1,13 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
-namespace Domain.Models
+namespace Domain.Models;
+
+public partial class Login
 {
-	public class Login
-	{
-		[Required(ErrorMessage = "User name is REQUIRED!")]
-		public string? UserName { get; set; }
-        [Required(ErrorMessage = "Password name is REQUIRED!")]
-        public string? Password { get; set; }
-	}
-}
+    public int Id { get; private set; }
 
+    public string UserName { get; set; } = null!;
+
+    public string Password { get; set; } = null!;
+}
