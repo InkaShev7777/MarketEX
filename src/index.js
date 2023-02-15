@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Authorize from './Authorization';
+import Registration from './Registration';
+
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Authorize/>
+    {/* <Authorize/> */}
+    <Registration/>
   </React.StrictMode>
 );
 
