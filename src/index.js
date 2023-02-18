@@ -4,16 +4,20 @@ import './index.css';
 import App from './App';
 import Authorize from './Authorization';
 import Registration from './Registration';
+import MainPage from './MainPage.js';
+
 
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    {/* <App /> */}
-    {/* <Authorize/> */}
-    <Registration/>
-  </React.StrictMode>
+  <MainPage/>
+  // <React.StrictMode>
+  //   {/* <App /> */}
+  //   {/* <Authorize/> */}
+   
+  // </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
