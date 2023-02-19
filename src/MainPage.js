@@ -1,6 +1,8 @@
 import './MainPage.css';
 import axios, { Axios } from 'axios';
 import { useEffect } from 'react';
+import { Link,Routes,Route,Outlet} from "react-router-dom";
+import Authorization from './Authorization';
 function MainPage() {
     useEffect(() => {
         //
@@ -46,9 +48,27 @@ function MainPage() {
                         var mainDiv = document.getElementById('MainDiv');
                         mainDiv.innerHTML = "";
                         for (const iter of product['data']['value']) {
+                            var divCard = document.createElement('div');
+                            divCard.setAttribute('class','cardDiv');
                             var img = document.createElement('img');
+                            img.setAttribute('class','imgCard');
                             img.src = iter['uriPhoto'];
-                            mainDiv.append(img);
+                            var title = document.createElement('h3');
+                            title.textContent = iter['title'] + ' ' + iter['model'];
+                            var price  = document.createElement('h4');
+                            price.textContent = iter['price'] + 'грн';
+                            var btnBuy = document.createElement('button');
+                            btnBuy.textContent = 'Buy';
+                            btnBuy.addEventListener('click',()=>{
+                                console.log(iter['id']);
+                            });
+
+
+                            divCard.append(img);
+                            divCard.append(title);
+                            divCard.append(price);
+                            divCard.append(btnBuy);
+                            mainDiv.append(divCard);
                         }
                     });
 
@@ -63,8 +83,9 @@ function MainPage() {
     return (
         <div>
             <div id="SearchDiv">
+                <h1 id='NameMarket'>M1n1_MarKet</h1>
                 <input id='searchtext' type="search" placeholder='Search....' />
-                <button onClick={() => {
+                <button id='buttonSearch' onClick={() => {
                     //
                     //      Search
                     //
@@ -77,17 +98,45 @@ function MainPage() {
                             'Content-Type': 'application/json'
                         }
                     }).then(product => {
-                        console.log(product);
-
                         var mainDiv = document.getElementById('MainDiv');
                         mainDiv.innerHTML = "";
                         for (const iter of product['data']['value']) {
+                            var divCard = document.createElement('div');
+                            divCard.setAttribute('class','cardDiv');
                             var img = document.createElement('img');
+                            img.setAttribute('class','imgCard');
                             img.src = iter['uriPhoto'];
-                            mainDiv.append(img);
+                            var title = document.createElement('h3');
+                            title.textContent = iter['title'] + ' ' + iter['model'];
+                            var price  = document.createElement('h4');
+                            price.textContent = iter['price'] + 'грн';
+                            var btnBuy = document.createElement('button');
+                            btnBuy.textContent = 'Buy';
+                            btnBuy.addEventListener('click',()=>{
+                                console.log(iter['id']);
+                            });
+
+
+                            divCard.append(img);
+                            divCard.append(title);
+                            divCard.append(price);
+                            divCard.append(btnBuy);
+                            mainDiv.append(divCard);
                         }
                     });
                 }}>Confirm</button>
+                <Link target='_blank' to='/Authorization.js'>Sign In</Link>
+                <Outlet/>
+                {/* <a target='_blank' href="/Authorization.js">Sign IN</a> */}
+                <Routes>
+                    <Route path='/Authorization.js' element={<Authorization/>}></Route>
+                </Routes>
+                {/* <button onClick={()=>{
+                    console.log('click');
+                    // window.open('http://localhost:3000/Authorization');
+                    window.location.assign('http://localhost:3000/Authorization');
+                }}>Sign In</button> */}
+                
             </div>
             <div id='MenuDiv'>
                 <div id='menuDivInner'></div>

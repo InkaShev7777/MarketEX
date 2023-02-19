@@ -5,18 +5,22 @@ import App from './App';
 import Authorize from './Authorization';
 import Registration from './Registration';
 import MainPage from './MainPage.js';
-
+import { BrowserRouter } from 'react-router-dom';
 
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <MainPage/>
-  // <React.StrictMode>
-  //   {/* <App /> */}
-  //   {/* <Authorize/> */}
+
+ 
+  <React.StrictMode>
+    {/* <App /> */}
+    {/* <Authorize/> */}
+    <BrowserRouter>
+    <MainPage/>
+  </BrowserRouter>
    
-  // </React.StrictMode>
+  </React.StrictMode>
   
 );
 
