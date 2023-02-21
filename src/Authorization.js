@@ -21,8 +21,10 @@ function Authoriz(){
                     }
                 }).then(data => {
                     sessionStorage.setItem('token', data['data']['token']);
+                    window.location.href='/';
                 });
             }}>Confirm</button>
+            <a id='signUpLink' href="/registration">Sign Up</a>
         </div>
     );
 }

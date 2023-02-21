@@ -27,3 +27,11 @@ button{
     height: 30px;
     width: 200px;
 }
+#signUpLink{
+    margin-left: 38%;
+    text-decoration: none;
+    color: blueviolet;
+}
+#signUpLink:hover{
+    border-bottom: 1px solid blueviolet;
+}

@@ -1,8 +1,6 @@
 import './MainPage.css';
 import axios, { Axios } from 'axios';
 import { useEffect } from 'react';
-import { Link,Routes,Route,Outlet} from "react-router-dom";
-import Authorization from './Authorization';
 function MainPage() {
     useEffect(() => {
         //
@@ -83,7 +81,7 @@ function MainPage() {
     return (
         <div>
             <div id="SearchDiv">
-                <h1 id='NameMarket'>M1n1_MarKet</h1>
+                <h1 id='NameMarket'>M1n1_MarKet.ua</h1>
                 <input id='searchtext' type="search" placeholder='Search....' />
                 <button id='buttonSearch' onClick={() => {
                     //
@@ -125,24 +123,17 @@ function MainPage() {
                         }
                     });
                 }}>Confirm</button>
-                <Link target='_blank' to='/Authorization.js'>Sign In</Link>
-                <Outlet/>
-                {/* <a target='_blank' href="/Authorization.js">Sign IN</a> */}
-                <Routes>
-                    <Route path='/Authorization.js' element={<Authorization/>}></Route>
-                </Routes>
-                {/* <button onClick={()=>{
-                    console.log('click');
-                    // window.open('http://localhost:3000/Authorization');
-                    window.location.assign('http://localhost:3000/Authorization');
-                }}>Sign In</button> */}
-                
+                <a id='signInLink' href="/authorize">Sign In</a>
             </div>
             <div id='MenuDiv'>
                 <div id='menuDivInner'></div>
                 <div id="MainDiv"></div>
             </div>
+            <footer id='footerStyle'>
+            
+            </footer>
         </div>
+       
     );
 }
 export default MainPage;

@@ -14,12 +14,7 @@ root.render(
 
  
   <React.StrictMode>
-    {/* <App /> */}
-    {/* <Authorize/> */}
-    <BrowserRouter>
-    <MainPage/>
-  </BrowserRouter>
-   
+    <App />
   </React.StrictMode>
   
 );

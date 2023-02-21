@@ -38,6 +38,7 @@ function Registration() {
                             }
                         }).then(data => {
                             sessionStorage.setItem('token', data['data']['token']);
+                            window.location.href = '/';
 
                             //
                             //  open main window. 
